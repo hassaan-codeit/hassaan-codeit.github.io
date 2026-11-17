@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Name Here - Terminal Developer &amp; Open Source Contributor building tools in Go, Rust, and Python">
+    <meta name="description" content="Hassaan Ahmed - BE Information Security student and competitive programmer">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="dns-prefetch" href="//api.github.com">
     <link rel="preconnect" href="https://api.github.com" crossorigin>
-    <title>Your Name Here - Terminal Developer</title>
+    <title>Hassaan Ahmed - Terminal Portfolio</title>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Your Name Here",
-        "jobTitle": "Terminal Developer",
-        "description": "Terminal Developer &amp; Open Source Contributor building tools in Go, Rust, and Python",
-        "url": "https://github.com/Your GitHub Username",
+        "name": "Hassaan Ahmed",
+        "jobTitle": "BE Information Security Student",
+        "description": "BE Information Security — 3rd Semester, NUST (Military College of Signals)",
+        "url": "https://github.com/hassaan-codeit",
         "sameAs": [
-            "https://github.com/Your GitHub Username",
-            "https://www.linkedin.com/in/Your LinkedIn Username"
+            "https://github.com/hassaan-codeit",
+            "https://www.linkedin.com/in/hassaan-ahmed-1a538736b/"
         ],
-        "knowsAbout": ["Go", "Rust", "Python", "Terminal Development", "Open Source"],
+        "knowsAbout": ["C++", "Python", "Java", "Information Security", "Competitive Programming"],
         "worksFor": {
             "@type": "Organization",
             "name": "Open Source Community"
@@ -43,6 +43,7 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            overflow-x: hidden;
         }
         
         .terminal {
@@ -51,6 +52,7 @@
             border-radius: 4px;
             padding: 20px;
             margin-bottom: 20px;
+            min-width: 0;
         }
         
         .prompt {
@@ -65,6 +67,7 @@
         .output {
             color: #dddddd;
             margin: 10px 0;
+            overflow-wrap: anywhere;
         }
         
         .section {
@@ -88,6 +91,7 @@
             padding: 15px;
             margin: 10px 0;
             min-height: 100px;
+            min-width: 0;
         }
         
         .project-title {
@@ -95,6 +99,7 @@
             font-weight: bold;
             font-size: 16px;
             margin-bottom: 5px;
+            overflow-wrap: anywhere;
         }
         
         .project-desc {
@@ -105,10 +110,13 @@
         .project-meta {
             color: #999;
             font-size: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 15px;
         }
         
         .project-meta span {
-            margin-right: 15px;
+            overflow-wrap: anywhere;
         }
         
         .link {
@@ -133,6 +141,36 @@
         .cursor {
             animation: blink 1s infinite;
         }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            flex: 0 0 96px;
+            border: 1px solid #00ff00;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .skills li {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 3px;
+            color: #00ff00;
+            padding: 6px 10px;
+        }
         
         @keyframes blink {
             0%, 50% { opacity: 1; }
@@ -148,6 +186,18 @@
             .terminal {
                 padding: 15px;
             }
+
+            .profile {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .project-meta {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 4px;
+            }
         }
     </style>
 </head>
@@ -156,10 +206,12 @@
         <section class="section">
             <div class="prompt">$</div>
             <div class="command">whoami</div>
-            <div class="output">
-                Your Name Here<br>
-                Terminal Developer &amp; Open Source Contributor<br>
-                Building tools in Go, Rust, and Python
+            <div class="output profile">
+                <img class="avatar" src="avatar.svg" alt="Hassaan Ahmed avatar" width="96" height="96">
+                <div>
+                    Hassaan Ahmed<br>
+                    BE Information Security — 3rd Semester, NUST (Military College of Signals)
+                </div>
             </div>
         </section>
         
@@ -168,7 +220,7 @@
             <div class="command">ls ~/projects/</div>
             <div class="output">
                 <h2 class="section-title">Pinned Projects</h2>
-                <div id="projects-container" style="min-height: 400px;">
+                <div id="projects-container" style="min-height: 240px;">
                     <div class="loading">Loading project data...</div>
                     <noscript>
                         <div class="error">Enable JavaScript to see live GitHub data.</div>
@@ -182,8 +234,32 @@
             <div class="command">cat ~/.profile</div>
             <div class="output">
                 <div class="section-title">About</div>
-                <p>I'm a developer passionate about building innovative solutions and creating meaningful applications. My focus is on developing software that makes a positive impact.</p>
-                <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, and sharing knowledge with the developer community.</p>
+                <p>I am a third-semester Information Security undergraduate at NUST (Military College of Signals) with a strong focus on low-level systems programming, and algorithmic problem-solving. My academic and self-study work centers on building secure, foundational software from scratch—ranging from AES-256 encrypted file vaults to object-oriented management systems. Alongside coursework in Data Structures, Object-Oriented Programming, and Cryptography, I actively train in competitive programming on Codeforces and LeetCode, solving algorithmic problems in C++ and Java and competing in speed programming contests. I value deep technical understanding and clean, reliable implementation over unnecessary abstraction.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="prompt">$</div>
+            <div class="command">cat ~/.skills</div>
+            <div class="output">
+                <div class="section-title">Skills</div>
+                <ul class="skills">
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Git</li>
+                    <li>VirtualBox</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="prompt">$</div>
+            <div class="command">cat ~/competitive-programming.log</div>
+            <div class="output">
+                <div class="section-title">Competitive Programming</div>
+                <p>My C++ algorithmic problem-solving journey includes 250 problems solved on LeetCode and active competition on Codeforces under the handle <strong>cipherjunkie</strong>.</p>
+                <p><a href="https://codeforces.com/profile/cipherjunkie" class="link" target="_blank" rel="noopener noreferrer">Codeforces</a> | <a href="https://leetcode.com/u/cipherjunkie/" class="link" target="_blank" rel="noopener noreferrer">LeetCode</a></p>
             </div>
         </section>
         
@@ -192,24 +268,16 @@
             <div class="command">cat ~/.contacts</div>
             <div class="output">
                 <div class="section-title">Contact</div>
-                <p>GitHub: <a href="https://github.com/Your GitHub Username" class="link" target="_blank" rel="noopener noreferrer">github.com/Your GitHub Username</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/Your LinkedIn Username" class="link" target="_blank" rel="noopener noreferrer">linkedin.com/in/Your LinkedIn Username</a></p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="prompt">$</div>
-            <div class="command">echo "Ready for collaboration"</div>
-            <div class="output">
-                <div class="section-title">Contributing &amp; Sponsorship</div>
-                <p>I welcome contributions to all my open source projects. Feel free to open issues, submit pull requests, or reach out for collaboration opportunities.</p>
-                <p>If you find my work valuable, consider sponsoring me on GitHub to support continued development.</p>
+                <p>GitHub: <a href="https://github.com/hassaan-codeit" class="link" target="_blank" rel="noopener noreferrer">github.com/hassaan-codeit</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/hassaan-ahmed-1a538736b/" class="link" target="_blank" rel="noopener noreferrer">linkedin.com/in/hassaan-ahmed-1a538736b</a></p>
+                <p>Email: <a href="mailto:hassaanahmedawan05@gmail.com" class="link">hassaanahmedawan05@gmail.com</a></p>
             </div>
         </section>
         
         <footer class="section">
             <div class="prompt">$</div>
             <div class="cursor">█</div>
+            <p><a href="https://github.com/cod-e-codes/lilweb-template" class="link" target="_blank" rel="noopener noreferrer">Template by Cody Marsengill — MIT License</a></p>
         </footer>
     </main>
 
@@ -217,34 +285,21 @@
         // Project configurations with fallback descriptions
         const PROJECTS = [
             {
-                name: 'project-one',
-                owner: 'Your GitHub Username',
-                fallbackDesc: 'A web application showcasing modern development practices and user interface design.'
+                name: 'FileVault',
+                owner: 'hassaan-codeit',
+                fallbackDesc: 'A Java file vault application for securely storing and managing files via AES and PBKDF2, built with Maven.',
+                githubUrl: 'https://github.com/hassaan-codeit/FileVault'
             },
             {
-                name: 'project-two',
-                owner: 'Your GitHub Username',
-                fallbackDesc: 'A collection of useful utilities and tools for developers and productivity.'
-            },
-            {
-                name: 'project-three',
-                owner: 'Your GitHub Username',
-                fallbackDesc: 'A utility application that helps users organize and manage their digital content efficiently.'
-            },
-            {
-                name: 'project-four',
-                owner: 'Your GitHub Username',
-                fallbackDesc: 'A developer tool that helps manage and organize your development workflow.'
-            },
-            {
-                name: 'project-five',
-                owner: 'Your GitHub Username',
-                fallbackDesc: 'An application that demonstrates advanced features and user experience design.'
+                name: 'CampusManager',
+                owner: 'hassaan-codeit',
+                fallbackDesc: 'A Java console application for managing campus data using core object-oriented design principles.',
+                githubUrl: 'https://github.com/hassaan-codeit/CampusManager'
             }
         ];
 
         // Cache management
-        const CACHE_KEY = 'github_projects_cache';
+        const CACHE_KEY = 'github_projects_cache_v2';
         const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
         function getCachedData() {
@@ -312,7 +367,7 @@
                         <span>⭐ ${stars}</span>
                         <span>🍴 ${forks}</span>
                         <span>📅 ${updated}</span>
-                        <span><a href="https://github.com/${project.owner}/${project.name}" class="link" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+                        <span><a href="${project.githubUrl}" class="link" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
                     </footer>
                 </article>
             `;
